@@ -3,8 +3,11 @@
 
   <div class="form-inputs">
     <%= f.input :content %>
-    <%= f.input :state %>
-  </div>
+    <%= f.radio_button_tag :state, 'to do' %>
+    <label>To Do</label>
+    <%= f.radio_button_tag :state, 'doing' %>
+    <label>Doing</label>
+  	</div>
 
   <div class="form-actions">
     <%= f.button :submit %>
