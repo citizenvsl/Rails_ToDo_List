@@ -1,12 +1,15 @@
 
 <div class="jumbotron">
-  <h1>Hello World, my name is Victor</h1>
-  <p><i class="fa fa-pencil-square-o"></i> This is a smart ToDo List</p>
-  
-<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
-
-
-  
+	<% if @user %>
+ 		 <h1>Welcome Home!</h1>
+ 		 <p><i class="fa fa-pencil-square-o"></i>Hello from your FunToDoList</p>
+ 		 <%= link_to "Get me to my tasks", tasks_path %>
+<% else %>
+	<h1>Welcome to FunTodoList</h1>
+ 		 <p><i class="fa fa-pencil-square-o"></i> Please Sign Up or Log In</p>
+	<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+	<%= link_to "Log In", new_user_session_path, class: "btn btn-primary btn-lg" %>
+<% end %>
 </div>
 
 

@@ -8,7 +8,8 @@ class TasksController < ApplicationController
     @to_do = current_user.tasks.where(state: "to do")
     @doing = current_user.tasks.where(state: "doing")
     @done = current_user.tasks.where(state: "done")
-    Task.ajax_request
+    @weather = Task.ajax_request("Barcelona")
+    @days = Task.get_next_five_days    
     respond_with(@tasks)
   end
 
