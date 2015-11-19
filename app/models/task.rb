@@ -1,5 +1,6 @@
 class Task < ActiveRecord::Base
 	belongs_to :user
+	
 	require 'json'
 	def self.ajax_request(city)
 		response = Faraday.get 'http://api.openweathermap.org/data/2.5/forecast?q=#{city},us&mode=json&appid=2de143494c0b295cca9337e1e96b00e0' 

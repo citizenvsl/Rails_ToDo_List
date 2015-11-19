@@ -2,14 +2,19 @@ class TasksController < ApplicationController
   before_action :authenticate_user!
   before_action :set_task, only: [:show, :edit, :update, :destroy, :change]
 
+
   respond_to :html
 
   def index
+    @user = current_user
     @to_do = current_user.tasks.where(state: "to do")
     @doing = current_user.tasks.where(state: "doing")
     @done = current_user.tasks.where(state: "done")
-    @weather = Task.ajax_request("Barcelona")
-    @days = Task.get_next_five_days    
+    @task = Task.new
+    if @user.city?
+      @weather = Task.ajax_request(@user.city)
+      @days = Task.get_next_five_days   
+    end 
     respond_with(@tasks)
   end
 

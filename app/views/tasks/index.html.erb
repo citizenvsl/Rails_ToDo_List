@@ -42,15 +42,17 @@
                 </table><%= link_to 'New Task', new_task_path %>
             </div>
             <div class="col-md-6 text-center">
-                <h1>Weather in your city <br> - Barcelona -</h1>
-                <br>
-                 <% @days.each_with_index do |day,index| %>
-                <p><%= day %> => <i class="wi wi-day-<%= @weather[index].downcase %>"></i>
-
-                </p>
-
-            <% end %>
-            
+                <h1>Weather in your city </h1>
+                <% if @user.city.capitalize %>
+                <h1>- <%= @user.city %> -</h1>
+                    <br>
+                     <% @days.each_with_index do |day,index| %>
+                    <p><%= day %> => <i class="wi wi-day-<%= @weather[index].downcase %>"></i>
+                    </p>
+                     <% end %>
+                <% else %>
+                    <%= link_to "Update City", edit_user_registration_path %>
+                <% end %>
                     
             </div>
         </div>
