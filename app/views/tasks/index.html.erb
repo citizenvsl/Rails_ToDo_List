@@ -1,51 +1,49 @@
-<h1>To Do</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Content</th>
-      <th>State</th>
-      <th colspan="4"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <%= render @to_do %>
-  </tbody>
-</table>
-
-<br>
-
-<h1>Doing</h1>
-<table>
-  <thead>
-    <tr>
-      <th>Content</th>
-      <th>State</th>
-      <th colspan="4"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-   <%= render @doing %>
-  </tbody>
-</table>
-
-<br>
-
-<h1>Done</h1>
-<table>
-  <thead>
-    <tr>
-      <th>Content</th>
-      <th>State</th>
-      <th colspan="4"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <%= render @done %>
-  </tbody>
-</table>
-
-<%= link_to 'New Task', new_task_path %>
+<div class="container">
+        <div class="row">
+            <div class="col-md-6 ">
+                <h1>To Do</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Content</th>
+                            <th>State</th>
+                            <th colspan="4"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%= render @to_do %>
+                    </tbody>
+                </table><br>
+                <h1>Doing</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Content</th>
+                            <th>State</th>
+                            <th colspan="4"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%= render @doing %>
+                    </tbody>
+                </table><br>
+                <h1>Done</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Content</th>
+                            <th>State</th>
+                            <th colspan="4"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%= render @done %>
+                    </tbody><br>
+                </table><%= link_to 'New Task', new_task_path %>
+            </div>
+            <div class="col-md-6 text-center">
+                <h1>Weather in your city</h1><i class=
+                "wi wi-day-lightning"></i>
+            </div>
+        </div>
+    </div>

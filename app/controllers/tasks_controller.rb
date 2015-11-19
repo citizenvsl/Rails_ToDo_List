@@ -24,7 +24,7 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = current_user.tasks.new(content: params[:task][:content], state: params[:state])
+    @task = current_user.tasks.new(task_params)
     @task.save
     respond_with(@task)
   end
@@ -53,7 +53,7 @@ class TasksController < ApplicationController
       @task = Task.find(params[:id])
     end
 
-    def task_params 
+    def task_params
       params.require(:task).permit(:content,:state)
     end
 
