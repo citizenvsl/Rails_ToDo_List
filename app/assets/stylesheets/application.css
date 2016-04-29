@@ -16,8 +16,8 @@
  *= require_self
  */
 
-h1 {
-	font-family: fantasy;
+body {
+	font-family: monospace;
 }
 td {
 	padding: 15px;
