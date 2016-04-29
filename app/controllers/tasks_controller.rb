@@ -2,7 +2,6 @@ class TasksController < ApplicationController
   before_action :authenticate_user!
   before_action :set_task, only: [:show, :edit, :update, :destroy, :change]
 
-
   respond_to :html
 
   def index
@@ -13,8 +12,8 @@ class TasksController < ApplicationController
     @task = Task.new
     if @user.city?
       @weather = Task.ajax_request(@user.city)
-      @days = Task.get_next_five_days   
-    end 
+      @days = Task.get_next_five_days
+    end
     respond_with(@tasks)
   end
 
@@ -52,7 +51,6 @@ class TasksController < ApplicationController
       format.html {redirect_to tasks_path, notice: "Task updated"}
     end
   end
-
 
 
   private
