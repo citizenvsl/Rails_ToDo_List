@@ -88,6 +88,7 @@ GEM
     multi_json (1.11.2)
     multipart-post (2.0.0)
     orm_adapter (0.5.0)
+    pg (0.18.3)
     pry (0.10.3)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -166,6 +167,7 @@ DEPENDENCIES
   font-awesome-rails
   jbuilder (~> 2.0)
   jquery-rails
+  pg
   pry
   rails (= 4.1.8)
   sass-rails (~> 4.0.3)
@@ -179,4 +181,4 @@ DEPENDENCIES
   weather-icons-rails
 
 BUNDLED WITH
-   1.10.6
+   1.11.2

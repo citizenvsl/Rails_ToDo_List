@@ -46,3 +46,9 @@ gem "font-awesome-rails"
 gem 'simple_form'
 gem 'devise'
 gem 'pry'
+
+
+group :production do
+  gem 'pg'
+end
+
