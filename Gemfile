@@ -15,6 +15,8 @@ gem 'coffee-rails', '~> 4.0.0'
 # gem 'therubyracer',  platforms: :ruby
 gem 'weather-icons-rails'
 
+gem 'rails_12factor', group: :production
+
 gem 'faraday', '~> 0.9.2'
 
 gem 'faraday_middleware', '~> 0.10.0'
